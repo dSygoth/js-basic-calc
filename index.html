@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calc</title>
+    <style>
+        * {
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <fieldset>
+            <legend>Basic Calc</legend>
+            <label for="first">1st</label>
+                <input type="number" id="first" />
+            <label for="second">2nd</label>
+                <input type="number" id="second" />
+            <select name="opt" id="operation">
+                <option value="add">Add</option>
+                <option value="substraction">Substraction</option>
+                <option value="division">Division</option>
+                <option value="multiplication">Multiplication</option>
+            </select>
+            <input type="button" id="check" value="=" />
+            <br>
+            <p>Result is: <button id="result">-</button></p>
+        </fieldset>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>
