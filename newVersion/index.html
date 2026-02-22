@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div id="container">
+    <input id="operation" type="text">
+    <button class="row firstRow" id="percentage">%</button>
+    <button class="row firstRow" id="clearAll" onclick="clearAll()">C</button>
+    <button class="row firstRow" id="clearDigit">D</button>
+    <button class="row firstRow" id="division">:</button><br>
+    <button class="row secondRow" id="seven" onclick="addDigit(7)">7</button>
+    <button class="row secondRow" id="eight" onclick="addDigit(8)">8</button>
+    <button class="row secondRow" id="nine" onclick="addDigit(9)">9</button>
+    <button class="row secondRow" id="multiplication">*</button><br>
+    <button class="row thirdRow" id="four" onclick="addDigit(4)">4</button>
+    <button class="row thirdRow" id="five" onclick="addDigit(5)">5</button>
+    <button class="row thirdRow" id="six" onclick="addDigit(6)">6</button>
+    <button class="row thirdRow" id="add" onclick="operate('add')">+</button><br>
+    <button class="row fourthRow" id="one" onclick="addDigit(1)">1</button>
+    <button class="row fourthRow" id="two" onclick="addDigit(2)">2</button>
+    <button class="row fourthRow" id="three" onclick="addDigit(3)">3</button>
+    <button class="row fourthRow" id="substraction">-</button><br>
+    <button class="row fifthRow" id="square">S</button>
+    <button class="row fifthRow" id="zero" onclick="addDigit(0)">0</button>
+    <button class="row fifthRow" id="dot" onclick="addDigit('.')">.</button>
+    <button class="row fifthRow" id="equal" onclick="operate('equal')">=</button>
+  </div>
+
+  <div class="history">
+    <p>Click here for your history jijiji</p>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
