@@ -13,40 +13,44 @@ const equal = document.getElementById('equal');
 let operations = [];
 let result = 0;
 
-function addDigit(num) {
-  numbers.value += num;
-}
+// adds digit to input
+function addDigit(num) { numbers.value += num; }
 
 function operate(opt) {
   if (numbers.value == "") return;
 
   operations.push(numbers.value);
-  let operationsNum = operations.map(parseFloat);
+  let operationsNum = operations.map(parseFloat); // converts all digits to numbers
   clearInput();
-
-  if (opt == "equal" && operationsNum.length >= 2) {
-    for (n = 0; n < operationsNum.length; n++) {
-      if (n == operationsNum.length - 1) break;
-
-      result += (operationsNum[n] + operationsNum[n+1]);
+  
+  if (opt == "equal") {
+    for (let n = 0; n < operationsNum.length; n++) {
+      if (n == operationsNum.length) break;
       
+      result += operationsNum[n]
     }
-    console.log(result)
     numbers.value = result;
     operations = [];
     result = 0;
   }
+  
+}
+// after clearDigit, now it concatenes Str not Float, even though in operate function it's parsed to it.
+
+function clearDigit() {
+  let cleared = numbers.value;
+
+  cleared = String(cleared).slice(0, -1);
+  numbers.value = cleared;
 }
 
-function clearInput() {
-  numbers.value = "";
-}
+function clearInput() { numbers.value = ""; }
 
 function clearAll() {
   clearInput();
   operations = [];
 }
 
-equal.addEventListener('click', () => {
-  
-})
+
+// TODO 
+// SUBSTRACTION, MULTI, DIV
