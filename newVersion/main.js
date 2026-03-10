@@ -19,6 +19,8 @@ function operate(opt) {
   else if (opt == "substract") operator = "substract";
   else if (opt == "multiplication") operator = "multiplication";
   else if (opt == "division") operator = "division";
+  else if (opt == "percentage") operator = "percentage";
+  else if (opt == "square") operator = "square";
 
   // The actual operations
   if (opt == "equal") {
@@ -62,6 +64,21 @@ function operate(opt) {
         }
 
         break;
+      
+      case "percentage":
+        result = operationsNum[1] * (operationsNum[0] / 100)
+
+        break;
+
+      case "square":
+        let powered = Math.pow(operationsNum[0], operationsNum[1]);
+        result = powered;
+        break;
+    }
+
+    if (result == "Infinity") {
+      numbers.value = "too much gng ngl✌️";
+      return;
     }
     
     numbers.value = result;
@@ -89,4 +106,6 @@ function clearAll() {
 
 
 // TODO 
+// square and percentage
+// before that hehe
 // ADD A HISTORY... HARDEST THING I GUESS.
