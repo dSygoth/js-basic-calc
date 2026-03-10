@@ -5,7 +5,51 @@ let operator = "";
 let result = 0;
 
 // adds digit to input
-function addDigit(num) { numbers.value += num; }
+function addDigit(num) {
+  num = parseFloat(num);
+  if (num || num == 0) numbers.value += num; 
+}
+
+document.addEventListener('keydown', e => {
+  switch (e.key) {
+    case "Escape":
+      clearAll();
+      break;
+
+    case "Backspace":
+      clearDigit();
+      break;
+
+    case "+":
+      operate("add");
+      break;
+
+    case "-":
+      operate("substract");
+      break;
+
+    case "*":
+      operate("multiplication");
+      break;
+
+    case "/":
+      operate("division");
+      break;
+
+    case ".":
+      numbers.value += e.key;
+      break;
+
+    case "Enter":
+    case "=":
+      operate("equal");
+      break;
+
+    default:
+      addDigit(e.key);
+      break;
+  }
+});
 
 function operate(opt) {
   if (numbers.value == "") return;
@@ -103,9 +147,3 @@ function clearAll() {
   clearInput();
   operations = [];
 }
-
-
-// TODO 
-// square and percentage
-// before that hehe
-// ADD A HISTORY... HARDEST THING I GUESS.
