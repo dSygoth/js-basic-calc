@@ -7,32 +7,37 @@
   <title>Calculator</title>
 </head>
 <body>
+  <h1>Simple Calculator</h1>
   <div id="container">
-    <input id="operation" type="text">
-    <button class="row firstRow" id="percentage" onclick="operate('percentage')">%</button>
-    <button class="row firstRow" id="clearAll" onclick="clearAll()">C</button>
-    <button class="row firstRow" id="clearDigit" onclick="clearDigit()">D</button>
-    <button class="row firstRow" id="division" onclick="operate('division')">/</button><br>
-    <button class="row secondRow" id="seven" onclick="addDigit(7)">7</button>
-    <button class="row secondRow" id="eight" onclick="addDigit(8)">8</button>
-    <button class="row secondRow" id="nine" onclick="addDigit(9)">9</button>
-    <button class="row secondRow" id="multiplication" onclick="operate('multiplication')">*</button><br>
-    <button class="row thirdRow" id="four" onclick="addDigit(4)">4</button>
-    <button class="row thirdRow" id="five" onclick="addDigit(5)">5</button>
-    <button class="row thirdRow" id="six" onclick="addDigit(6)">6</button>
-    <button class="row thirdRow" id="add" onclick="operate('add')">+</button><br>
-    <button class="row fourthRow" id="one" onclick="addDigit(1)">1</button>
-    <button class="row fourthRow" id="two" onclick="addDigit(2)">2</button>
-    <button class="row fourthRow" id="three" onclick="addDigit(3)">3</button>
-    <button class="row fourthRow" id="substraction" onclick="operate('substract')">-</button><br>
-    <button class="row fifthRow" id="square" onclick="operate('square')">S</button>
-    <button class="row fifthRow" id="zero" onclick="addDigit(0)">0</button>
-    <button class="row fifthRow" id="dot" onclick="addDigit('.')">.</button>
-    <button class="row fifthRow" id="equal" onclick="operate('equal')">=</button>
-  </div>
+    <input id="operation" type="text" placeholder="0">
+    <button class="row" onclick="operate('percentage')">%</button>
+    <button class="row" onclick="clearAll()">C</button>
+    <button class="row" onclick="clearDigit()">D</button>
+    <button class="row" onclick="operate('division')">/</button>
+    <br>
 
-  <div class="history">
-    <p>Click here for your history jijiji</p>
+    <button class="row" onclick="addDigit(7)">7</button>
+    <button class="row" onclick="addDigit(8)">8</button>
+    <button class="row" onclick="addDigit(9)">9</button>
+    <button class="row" onclick="operate('multiplication')">*</button>
+    <br>
+
+    <button class="row" onclick="addDigit(4)">4</button>
+    <button class="row" onclick="addDigit(5)">5</button>
+    <button class="row" onclick="addDigit(6)">6</button>
+    <button class="row" onclick="operate('add')">+</button>
+    <br>
+
+    <button class="row" onclick="addDigit(1)">1</button>
+    <button class="row" onclick="addDigit(2)">2</button>
+    <button class="row" onclick="addDigit(3)">3</button>
+    <button class="row" onclick="operate('substract')">-</button>
+    <br>
+
+    <button class="row" onclick="operate('square')">S</button>
+    <button class="row" onclick="addDigit(0)">0</button>
+    <button class="row" onclick="addDigit('.')">.</button>
+    <button class="row" onclick="operate('equal')">=</button>
   </div>
 
   <script src="./main.js"></script>

@@ -6,6 +6,11 @@ let result = 0;
 
 // adds digit to input
 function addDigit(num) {
+  if (num == ".") {
+    numbers.value += num;
+    return;
+  }
+
   num = parseFloat(num);
   if (num || num == 0) numbers.value += num; 
 }
